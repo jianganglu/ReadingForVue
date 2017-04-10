@@ -1,0 +1,26 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+  <title>v-if</title>
+</head>
+<body>
+  <div id="app-9">
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    var app9 = new Vue({
+      el: '#app-9',
+      data: {
+        message: 'Hello'
+      },
+      computed: {
+        reversedMessage: function() {
+          return this.message.split('').reverse().join('');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

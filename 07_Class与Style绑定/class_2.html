@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+  <title>class</title>
+</head>
+<body>
+  <div id="app" class="static" v-bind:class="classObject"></div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        isActive: true,
+        error: null
+      },
+      computed: {
+        classObject: function() {
+          return {
+            active: this.isActive && !this.error,
+            'text-danger': this.error && this.error.type === 'fatal'
+          };
+        }
+      }
+    });
+  </script>
+</body>
+</html>

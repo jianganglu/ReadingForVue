@@ -1,0 +1,32 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+  <title>class</title>
+</head>
+<body>
+  <template v-if="loginType === 'username'">
+    <label>Username</label>
+    <input placeholder="Enter your username" key="username-input">
+  </template>
+  <template v-else>
+    <label>Email</label>
+    <input placeholder="Enter your email address" key="email-input">
+  </template>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        ok: true
+      }
+    });
+
+    var app1 = new Vue({
+      el: '#app-1',
+      data: {
+        ok1: true
+      }
+    });
+  </script>
+</body>
+</html>

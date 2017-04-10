@@ -1,0 +1,23 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+  <title>v-on</title>
+</head>
+<body>
+  <div id="app">
+    <!-- 只有在 keyCode 是 13 时调用 vm.submit() -->
+    <input v-on:keyup.13="submit">
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+  new Vue({
+    el: '#app',
+    methods: {
+      submit: function() {
+        console.log('submit');
+      }
+    }
+  });
+  </script>
+</body>
+</html>

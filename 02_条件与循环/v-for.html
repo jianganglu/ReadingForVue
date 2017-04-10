@@ -10,6 +10,11 @@
         {{ todo.text }}
       </li>
     </ol>
+    <ol>
+      <li v-for="(todo, index) in todos">
+        {{ key }} - {{ index }} - {{ todo.text }}
+      </li>
+    </ol>
   </div>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script>

@@ -1,0 +1,19 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+  <title>class</title>
+</head>
+<body>
+  <div id="app" class="static" v-bind:class="[activeClass, errorClass]"></div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        activeClass: 'active',
+        errorClass: 'text-danger'
+      }
+    });
+  </script>
+</body>
+</html>

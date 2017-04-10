@@ -1,0 +1,30 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+  <title>class</title>
+</head>
+<body>
+  <div id="app" class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+  <div id="app-1" class="static" v-bind:class="classObject"></div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        isActive: true,
+        hasError: false
+      }
+    });
+
+    var app1 = new Vue({
+      el: '#app-1',
+      data: {
+        classObject: {
+          active: true,
+          'text-danger': false
+        }
+      }
+    });
+  </script>
+</body>
+</html>
